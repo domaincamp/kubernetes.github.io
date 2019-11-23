@@ -46,7 +46,7 @@ Die Verbindungen vom Apiserver zum Kubelet werden verwendet für:
   * Bereitstellung der Portweiterleitungsfunktion des kubelet.
 
 Diese Verbindungen enden am HTTPS-Endpunkt des kubelet.
-Standardmäßig überprüft der Apiserver das Serverzertifikat des Kubelet nicht, was die Verbindung von angreifbar für Man-in-the-Middle-Angriffe macht, und ist es ist daher **unsicher** wenn die Verbindungen über nicht vertrauenswürdige und/oder öffentliche Netzwerke laufen.
+Standardmäßig überprüft der Apiserver das Serverzertifikat des Kubelet nicht, was die Verbindung angreifbar für Man-in-the-Middle-Angriffe macht, und ist daher **unsicher**, wenn die Verbindungen über nicht vertrauenswürdige und/oder öffentliche Netzwerke laufen.
 
 Um diese Verbindung zu überprüfen, verwenden Sie das Flag `--kubelet-certificate-authority`, um dem Apiserver ein Stammzertifikatbündel bereitzustellen, das zur Überprüfung des Server-Zertifikats des kubelet verwendet wird.
 
